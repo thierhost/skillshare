@@ -1,0 +1,28 @@
+<ion-view>
+  <ion-content padding="false" overflow-scroll="true">
+
+    <div class="list card">
+
+      <div class="item item-image">
+        <img src="{{evenement.img}}">
+      </div>
+
+      <div class="item item-icon-left assertive">
+        <button class="button button-balanced">
+          Intéressé(é)
+        </button>
+        <button class="button button-royal">
+          J'y Participe
+        </button>
+
+      </div>
+      <div class="item item-text-wrap ">
+        <h2>{{evenement.description}}</h2>
+        <p>{{evenement.libelle}}</p>
+      </div>
+
+    </div>
+    <div id="map" data-tap-disabled="true"></div>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,48 @@
+<ion-view>
+ <ion-content padding="true" overflow-scroll="true">
+   <div class="row responsive-sm">
+     <div class="col col-33 col-offset-33 text-center">
+         <img src="img/Suite.png" width="30%">
+     </div>
+   </div>
+
+ <div class="card">
+  <div class="item item-divider text-center">
+    Connexion
+  </div>
+  <div class="item item-text-wrap">
+    <form  name="form"  novalidate>
+      <div class="list">
+        <label class="item item-input">
+          <input type="email" ng-model="user.login" name="userlogin"  required placeholder="Adresse e-mail" >
+        </label>
+        <!-- validation
+        <p ng-show="form.userlogin.$invalid && !form.userlogin.$pristine">* Ce champ doit être une address email valide</p>
+         validation -->
+
+        <label class="item item-input">
+          <input type="password" ng-model="user.password" name="userpassword"placeholder="mot de passe " ng-minlength="6" required>
+          <!-- validation
+          <p ng-show="form.userpassword.$invalid.required">* Mot de passe obligatoire</p>
+           validation -->
+        </label>
+      </div>
+    </form>
+  </div>
+   <div class="item item-divider text-center">
+     <a  class="button button-positive button-small"  ng-click="connexion(user)">
+       Connexion
+     </a>
+     <button class="button button-energized button-small">
+       Mot de passe oublié!
+     </button>
+   </div>
+</div>
+   <div class="row responsive-sm">
+     <div class="col col-33 col-offset-33 text-center">
+       <a href="#/inscription" class="button button-balanced button-small "> Inscription</a>
+     </div>
+
+   </div>
+ </ion-content>
+</ion-view>

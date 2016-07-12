@@ -1,0 +1,13 @@
+/* Empty. Add your own CSS if you like */
+.menuContent{
+  padding-top: 70px;
+}
+.scroll {
+  height: 100%;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+

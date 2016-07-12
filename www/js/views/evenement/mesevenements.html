@@ -1,0 +1,68 @@
+<ion-view>
+  <ion-content padding="false" overflow-scroll="true">
+
+    <div class="item item-divider item-small">
+      <a class="ion-compose button button-calm pull-right" ng-click="modal.show()"></a>
+    </div>
+
+
+
+
+    <!-- modal -->
+    <script id="templates/modal.html" type="text/ng-template">
+      <ion-modal-view>
+        <ion-header-bar class="bar bar-header bar-positive">
+          <h1 class="title">Evenement</h1>
+          <button class="button button-clear button-primary" ng-click="modal.hide()">Annuler</button>
+        </ion-header-bar>
+        <ion-content class="padding">
+          <form >
+            <div class="list">
+              <label class="item item-input">
+                <span class="input-label">libelle</span>
+                <input ng-model="evenement.libelle" type="text">
+              </label>
+              <label class="item item-input">
+                <span class="input-label">Description</span>
+                <input ng-model="evenement.description" type="text">
+              </label>
+              <label class="item item-input">
+                <span class="input-label">Date de début</span>
+                <input ng-model="evenement.datedebut" type="date">
+              </label>
+              <label class="item item-input">
+                <span class="input-label">Date de fin</span>
+                <input ng-model="evenement.datefin" type="date">
+              </label>
+
+              <button class="button button-full button-positive" ng-click="addevenement(evenement)">créer</button>
+            </div>
+          </form>
+        </ion-content>
+      </ion-modal-view>
+    </script>
+
+
+
+    <!-- modal -->
+
+
+    <!-- List de mes evenements -->
+    <div class="list" >
+      <ion-list>
+        <ion-item ng-repeat="evenement in evenements" option-buttons="buttons" class="item-thumbnail-left"  >
+          <img ng-src="{{ evenement.img }}">
+          <p>{{ evenement.libelle}}</p>
+          <ion-option-button class="button-royal">Voir</ion-option-button>
+          <ion-option-button class="button-positive">Modifier</ion-option-button>
+          <ion-option-button class="button-assertive">Supprimer</ion-option-button>
+        </ion-item>
+      </ion-list>
+
+      <!-- List de mes evenements -->
+
+    </div>
+    <br/>
+    <br/>
+  </ion-content>
+</ion-view>

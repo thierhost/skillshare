@@ -1,0 +1,61 @@
+<ion-view>
+  <ion-content padding="false" overflow-scroll="true">
+
+    <div class="item item-divider item-small">
+      <a class="ion-compose button button-calm pull-right" ng-click="modal.show()"></a>
+    </div>
+
+    <div class="list" >
+      <ion-list>
+        <ion-item ng-repeat="competence in competences" option-buttons="buttons" >
+          <p>{{ competence.libelle}}</p>
+          <form>
+          <input type="text" ng-model="compet.id" value="{{competence.id}}" ng-hide="true">
+          </form>
+          <ion-option-button class="button-assertive" ng-click="supprimer(compet)">Supprimer</ion-option-button>
+          {{compet}}
+        </ion-item>
+      </ion-list>
+
+      <!-- List de mes evenements -->
+
+    </div>
+
+    <!--- modal-->
+    <script id="templates/modal.html" type="text/ng-template">
+      <ion-modal-view>
+        <ion-header-bar class="bar bar-header bar-positive">
+          <h1 class="title">Nouvelle Compétence</h1>
+          <button class="button button-clear button-primary" ng-click="modal.hide()">Annuler</button>
+        </ion-header-bar>
+        <ion-content class="padding">
+          <form >
+          <div class="list">
+            <label class="item item-input">
+              <span class="input-label">libelle</span>
+              <input ng-model="competence.libelle" type="text">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Description</span>
+              <input ng-model="competence.description" type="text">
+            </label>
+            <label class="item item-input item-select">
+              <div class="input-label">
+                Catégorie
+              </div>
+              <select ng-model="competence.category_id" ng-options="category.id as category.libelle for category in categories"></select>
+              <select> </select>
+            </label>
+            <button class="button button-full button-positive" ng-click="addcompetence(competence)">créer</button>
+          </div>
+          </form>
+        </ion-content>
+      </ion-modal-view>
+    </script>
+
+
+    <!--- fin modal-->
+    <br/>
+    <br/>
+  </ion-content>
+</ion-view>

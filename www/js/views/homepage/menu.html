@@ -1,0 +1,87 @@
+<ion-side-menus enable-menu-with-back-views="true">
+
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-stable" >
+      <ion-nav-title>
+        <a href="#/menu/contenu">
+          <img src="img/Suite.png" alt="Suite"  width="10%">
+        </a>
+      </ion-nav-title>
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"> </ion-nav-view>
+  </ion-side-menu-content>
+
+
+  <ion-side-menu side="left">
+    <ion-header-bar class="bar-stable bar-calm">
+      <h1 class="title">Menu</h1>
+    </ion-header-bar>
+    <ion-content>
+      <ion-list>
+        <ion-item menu-close   >
+          <i class="icon ion-person"> </i> {{user.prenom}} {{user.nom | uppercase}}
+        </ion-item>
+        <ion-item menu-close href="#/menu/mescontenus"  >
+          <i class="icon ion-social-rss"> </i>  Mes contenus
+        </ion-item>
+
+        <ion-item menu-close href="#/menu/mescompetences"  >
+          <i class="icon ion-ribbon-b"> </i> Mes compétences
+        </ion-item>
+
+        <ion-item menu-close href="#"  >
+          <i class="icon ion-speakerphone"> </i> Mes demandes
+        </ion-item>
+
+        <ion-item menu-close href="#"  >
+          <i class="icon ion-social-usd-outline"> </i> Mes offres
+        </ion-item>
+
+        <ion-item menu-close href="#/menu/mesevenements"  >
+          <i class="icon ion-android-compass"> </i>  Mes événements
+        </ion-item>
+
+        <ion-item menu-close href="#"  >
+          <i class="icon ion-ios-gear-outline"> </i>  Paramètres
+        </ion-item>
+
+        <ion-item menu-close href="#/menu/deconnexion"  >
+          <i class="icon ion-log-out"> </i>  Déconnexion
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+
+
+
+</ion-side-menus>
+
+
+<ion-tabs class="tabs-icon-top tabs-light tabs-stable fbnews xfade-in-not-out">
+
+  <ion-tab title="Contenus" icon="icon ion-document-text" href="#/menu/contenus">
+
+  </ion-tab>
+
+  <ion-tab title="Evénements" icon="icon ion-navigate" href="#/menu/evenements">
+
+  </ion-tab>
+
+  <ion-tab title="Demandes" icon="icon ion-chatbox" href="#/menu/demandes">
+
+  </ion-tab>
+
+  <ion-tab title="Offres" icon="icon ion-eye" href="#/menu/offres">
+
+  </ion-tab>
+
+
+</ion-tabs>
+
+

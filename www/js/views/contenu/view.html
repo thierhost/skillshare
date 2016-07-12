@@ -1,0 +1,29 @@
+<ion-view>
+  <ion-content padding="true" overflow-scroll="true">
+    <div class="list card">
+
+      <div class="item item-avatar">
+        <img ng-src="{{contenu.img}}">
+        <h2>{{contenu.username}}</h2>
+        <p>{{contenu.categorie}}</p>
+      </div>
+
+      <div class="item item-body">
+        <div class="video-container">
+          <iframe class="full-image videoPlayer" ng-src="{{trustSrc(contenu.url)}}" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <p>
+          <a href="#" class="subdued">1 Like</a>
+          <a href="#" class="subdued">5 Comments</a>
+        </p>
+        <hr>
+        <p>
+          {{contenu.description}}
+        </p>
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>

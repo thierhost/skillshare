@@ -1,0 +1,76 @@
+<ion-view>
+  <ion-content padding="true" overflow-scroll="true">
+
+    <div class="row responsive-sm">
+      <div class="col col-33 col-offset-33 text-center">
+        <img src="img/Suite.png" width="30%">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="item item-divider text-center">
+        Inscription
+      </div>
+
+      <div class="item item-text-wrap">
+        <form name="form"  novalidate>
+          <div class="list">
+            <label class="item item-input">
+              <input type="text" placeholder="Nom" ng-model="user.nom" name="usernom"  required>
+
+            </label>
+            <label class="item item-input">
+              <input type="text" placeholder="Prenom" ng-model="user.prenom" name="userprenom" required>
+            </label>
+
+            <!-- validation
+            <p ng-show="form.usernom.$invalid && !form.usernom.$pristine">* Ces champs sont obligatoires</p>
+            <!-- validation -->
+
+            <label class="item item-input">
+              <input type="email" placeholder="Adresse e-mail" ng-model="user.login" name="userlogin" required>
+            </label>
+
+            <!-- validation
+            <p ng-show="form.userlogin.$invalid && !form.userlogin.$pristine">* Ce champ doit être une address email valide</p>
+            <!-- validation -->
+
+            <label class="item item-input">
+              <input type="password" placeholder="Mot de passe" ng-model="user.password" name="userpassword" required  ng-minlength="6">
+            </label>
+            <!-- validation
+            <p ng-show="form.userpassword.$invalid && !form.userpassword.$pristine">* Mot de passe obligatoire et doit être de plus de 6 caracteres</p>
+            <!-- validation  ng-disabled="form.$invalid" -->
+            <label class="item item-input">
+              <input type="number" placeholder="Numero de téléphone" ng-model="user.telephone" name="usertelephone" required  ng-minlength="9" ng-maxlength="11">
+            </label>
+
+            <label class="item item-input">
+              <input type="text" placeholder="adresse" ng-model="user.adresse" name="useradresse" required>
+            </label>
+
+
+          </div>
+
+        </form>
+      </div>
+
+      <div class="item item-divider text-center">
+        <a class="button button-balanced button-small"   ng-click="inscription(user)">
+         Valider
+        </a>
+        <button class="button button-assertive button-small">
+          Annuler
+        </button>
+
+      </div>
+    </div>
+
+  </ion-content>
+  <div class="tabs tabs-icon-only">
+    <a class="tab-item" href="#/">
+      <i class="icon ion-home"></i>
+      Accueil
+    </a>
+  </div>
+</ion-view>

@@ -1,0 +1,55 @@
+<ion-view>
+  <ion-content padding="false" overflow-scroll="true">
+
+    <div class="item item-divider item-small">
+      <a class="ion-compose button button-calm pull-right" ng-click="modal.show()"> Ajouter un contenu</a>
+    </div>
+
+
+
+    <!--- modal-->
+    <script id="templates/modal.html" type="text/ng-template">
+      <ion-modal-view>
+        <ion-header-bar class="bar bar-header bar-positive">
+          <h1 class="title">Nouveau contenu</h1>
+          <button class="button button-clear button-primary" ng-click="modal.hide()">Annuler</button>
+        </ion-header-bar>
+        <ion-content class="padding">
+          <form >
+            <div class="list">
+              <label class="item item-input">
+                <span class="input-label">Titre</span>
+                <input ng-model="contenu.titre" type="text">
+              </label>
+
+              <label class="item item-input">
+                <span class="input-label">Description</span>
+                <input ng-model="contenu.description" type="text">
+              </label>
+
+              <label class="item item-input item-select">
+                <div class="input-label">
+                  Catégorie
+                </div>
+                <select ng-model="contenu.category_id" ng-options="category.id as category.libelle for category in categories"></select>
+                <select> </select>
+              </label>
+              <label class="item item-input">
+                <span class="input-label">Fichier</span>
+                <input ng-model="contenu.fichier" type="file">
+              </label>
+
+
+              <button class="button button-full button-positive" ng-click="addcontenu(contenu)">créer</button>
+            </div>
+          </form>
+        </ion-content>
+      </ion-modal-view>
+    </script>
+
+
+    <!--- fin modal-->
+    <br/>
+    <br/>
+  </ion-content>
+</ion-view>

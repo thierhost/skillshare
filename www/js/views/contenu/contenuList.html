@@ -1,0 +1,24 @@
+<ion-view>
+  <ion-content padding="true" overflow-scroll="true">
+    
+
+        <div class="list" >
+          <ion-list>
+            <ion-item ng-repeat="contenu in contenus" option-buttons="buttons" class="item-thumbnail-left" ng-href="#/menu/contenus/{{contenu.id}}" >
+              <img ng-src="{{ contenu.img }}">
+              <h2>{{ contenu.username }}</h2>
+              <p>{{ contenu.categorie}}</p>
+              <ion-option-button class="button-positive">Partager</ion-option-button>
+              <ion-option-button class="button-assertive">Modifier</ion-option-button>
+            </ion-item>
+          </ion-list>
+
+        </div>
+        <br/>
+        <br/>
+      
+      
+
+
+  </ion-content>
+    </ion-view>
